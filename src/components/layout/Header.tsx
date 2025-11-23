@@ -11,7 +11,7 @@ const Header = () => {
           <span className="text-xl font-bold">PolskieKasyno</span>
         </Link>
 
-        <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
+        <nav className="flex items-center space-x-6 text-sm font-medium">
           <Link to="/" className="transition-colors hover:text-accent">
             Strona główna
           </Link>
@@ -25,10 +25,6 @@ const Header = () => {
             Kontakt
           </Link>
         </nav>
-
-        <Button className="bg-accent text-accent-foreground hover:bg-accent/90">
-          Top kasyno 🎰
-        </Button>
       </div>
     </header>
   );

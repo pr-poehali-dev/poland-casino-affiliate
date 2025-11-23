@@ -5,6 +5,13 @@ import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
 
 const Home = () => {
+  const scrollToCasinos = () => {
+    const casinosSection = document.getElementById('top-casinos');
+    if (casinosSection) {
+      casinosSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   const topCasinos = [
     {
       name: 'Royal Casino',
@@ -88,11 +95,20 @@ const Home = () => {
                 i bezpieczna gra dla polskich graczy.
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
-                <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+                <Button 
+                  size="lg" 
+                  className="bg-accent text-accent-foreground hover:bg-accent/90"
+                  onClick={scrollToCasinos}
+                >
                   Zobacz top kasyna
                   <Icon name="ArrowRight" size={20} className="ml-2" />
                 </Button>
-                <Button size="lg" variant="outline" className="bg-background text-foreground hover:bg-background/90">
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="bg-background text-foreground hover:bg-background/90"
+                  onClick={scrollToCasinos}
+                >
                   Porównaj bonusy
                 </Button>
               </div>
@@ -123,7 +139,7 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="py-16">
+        <section id="top-casinos" className="py-16 scroll-mt-20">
           <div className="container">
             <div className="flex items-center justify-between mb-8">
               <div>
